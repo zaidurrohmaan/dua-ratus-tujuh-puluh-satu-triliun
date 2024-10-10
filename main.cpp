@@ -1,3 +1,4 @@
+#include <cctype>
 #include <iostream>
 #include <unordered_map>
 #include <sstream>
@@ -19,6 +20,12 @@ unordered_map<string, int> M = {
     {"sepuluh", 10}, 
     {"sebelas", 11}
 };
+
+string toLowerCase(string S) {
+    string result = "";
+    for (int i = 0; i < S.size(); i++) result += tolower(S[i]);
+    return result;
+}
 
 long long parseThreeDigits(const vector<string>& words) {
     long long result = 0, temp = 0;
@@ -46,7 +53,8 @@ long long parseThreeDigits(const vector<string>& words) {
     return result;
 }
 
-long long textToDigits(const string& text) {
+long long textToDigits(const string& s) {
+    string text = toLowerCase(s);
     stringstream ss(text);
     string word;
     vector<string> segmentWords;
@@ -77,6 +85,6 @@ long long textToDigits(const string& text) {
 }
 
 int main() {
-    string text = "dua ratus tujuh puluh satu triliun dua ratus tujuh puluh satu miliar dua ratus tujuh puluh satu juta dua ratus tujuh puluh satu ribu dua ratus tujuh puluh satu";
+    string text = "SebelAs juta dua ratus dua puluh tiga ribu tiga ratus empat puluh empat";
     cout << textToDigits(text);
 }
