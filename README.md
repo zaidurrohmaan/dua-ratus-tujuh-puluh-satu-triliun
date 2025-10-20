@@ -50,4 +50,4 @@ Penulis mendapat tantangan untuk membuat algoritma ini pada saat sesi code inter
 
 ## Mengapa diberi nama 271 Triliun?
 
-Jawaban diserahkan kepada pembaca sebagai bahan latihan :)
+Jawaban diserahkan kepada pembaca sebagai bahan latihan. (Hint: 🐁🏢)
